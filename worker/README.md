@@ -57,7 +57,7 @@ export function logbench(...content: unknown[]) {
 
 You get the POST Url by right clicking on a project:
 
-![CleanShot 2024-12-18 at 10 15 12@2x](https://github.com/user-attachments/assets/d148a419-410f-45c2-bc46-a5b9c4ed834b)
+![CleanShot 2024-12-18 at 10 15 12@2x](https://github.com/user-attachments/assets/c5830546-8c2f-4ab3-bf51-12b142b3ba85)
 
 Then you can use the function like this
 
