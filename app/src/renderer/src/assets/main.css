@@ -1,0 +1,309 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+
+    --jsonBorderLeft: 20px solid transparent;
+    --jsonPaddingLeft: 20px;
+  }
+
+  html[data-theme='gruvbox'] {
+    --background: 200 4.76 5;
+    --background-darker: 200 4.76 4;
+    --background-lighter: 200 4.76 7;
+    --background-lightest: 200 4.76 12;
+    --background-lightest-hover: 200 4.76 16;
+    --foreground: 0 0 100;
+    --foreground-inverted: 0 0 0;
+    --foreground-muted: 200 4.76 50;
+
+    --border: 28 8.11 0.5;
+    --border-light: 200 4.76 10;
+    --border-lighter: 200 4.76 16;
+    --border-lighter-hover: 200 4.76 20;
+
+    --primary: 25.6 200 56.9;
+    --primary-muted: 24.4 48.5 12.9;
+
+    --jsonBracketColor: 25.9 84.2 57.8;
+    --jsonBracketHoverBackground: 0 0 20;
+    --jsonSeparatorColor: 25.9 84.2 57.8;
+    --jsonKeyColor: 155 32.5 59.2;
+    --jsonValColor: 0 0 100;
+    --jsonValStringColor: 0 0 100;
+    --jsonValNumberColor: 343 36.4 66.1;
+    --jsonValBooleanColor: 155 32.5 59.2;
+  }
+
+  html[data-theme='tokyonight'] {
+    --background: 222 26 12;
+    --background-darker: 222 26 9;
+    --background-lighter: 222 26 16;
+    --background-lightest: 222 26 22;
+    --background-lightest-hover: 222 26 27;
+    --foreground: 220 13 84;
+    --foreground-inverted: 222 26 12;
+    --foreground-muted: 220 13 50;
+
+    --border: 222 26 18;
+    --border-light: 222 26 22;
+    --border-lighter: 222 26 26;
+    --border-lighter-hover: 222 26 30;
+
+    --primary: 223 70 66;
+    --primary-muted: 223 40 40;
+
+    --jsonBracketColor: 223 70 66;
+    --jsonBracketHoverBackground: 222 26 15;
+    --jsonSeparatorColor: 223 70 66;
+    --jsonKeyColor: 289 55 72;
+    --jsonValColor: 220 13 84;
+    --jsonValStringColor: 344 85 74;
+    --jsonValNumberColor: 28 90 62;
+    --jsonValBooleanColor: 155 58 55;
+  }
+
+  html[data-theme='dracula'] {
+    --background: 235 15 15;
+    --background-darker: 235 15 12;
+    --background-lighter: 235 15 18;
+    --background-lightest: 235 15 24;
+    --background-lightest-hover: 235 15 30;
+    --foreground: 60 3 89;
+    --foreground-inverted: 235 15 15;
+    --foreground-muted: 60 3 55;
+
+    --border: 235 15 20;
+    --border-light: 235 15 24;
+    --border-lighter: 235 15 28;
+    --border-lighter-hover: 235 15 32;
+
+    --primary: 322 83 66;
+    --primary-muted: 322 40 40;
+
+    --jsonBracketColor: 231 89 64;
+    --jsonBracketHoverBackground: 235 15 18;
+    --jsonSeparatorColor: 231 89 64;
+    --jsonKeyColor: 289 64 68;
+    --jsonValColor: 60 3 89;
+    --jsonValStringColor: 322 83 66;
+    --jsonValNumberColor: 39 92 63;
+    --jsonValBooleanColor: 134 58 52;
+  }
+
+  html[data-theme='solarized-dark'] {
+    --background: 192 30 9;
+    --background-darker: 192 30 7;
+    --background-lighter: 192 30 12;
+    --background-lightest: 192 30 16;
+    --background-lightest-hover: 192 30 20;
+    --foreground: 45 20 80;
+    --foreground-inverted: 192 30 9;
+    --foreground-muted: 45 20 55;
+
+    --border: 192 30 14;
+    --border-light: 192 30 18;
+    --border-lighter: 192 30 22;
+    --border-lighter-hover: 192 30 26;
+
+    --primary: 187 45 68;
+    --primary-muted: 187 30 40;
+
+    --jsonBracketColor: 45 20 80;
+    --jsonBracketHoverBackground: 192 30 12;
+    --jsonSeparatorColor: 45 20 80;
+    --jsonKeyColor: 39 70 65;
+    --jsonValColor: 45 20 80;
+    --jsonValStringColor: 187 45 68;
+    --jsonValNumberColor: 25 60 60;
+    --jsonValBooleanColor: 95 45 60;
+  }
+
+  html[data-theme='one-dark'] {
+    --background: 220 13 13;
+    --background-darker: 220 13 10;
+    --background-lighter: 220 13 16;
+    --background-lightest: 220 13 20;
+    --background-lightest-hover: 220 13 25;
+    --foreground: 220 10 80;
+    --foreground-inverted: 220 13 13;
+    --foreground-muted: 220 10 60;
+
+    --border: 220 13 15;
+    --border-light: 220 13 18;
+    --border-lighter: 220 13 22;
+    --border-lighter-hover: 220 13 26;
+
+    --primary: 207 82 64;
+    --primary-muted: 207 50 45;
+
+    --jsonBracketColor: 207 82 64;
+    --jsonBracketHoverBackground: 220 13 15;
+    --jsonSeparatorColor: 207 82 64;
+    --jsonKeyColor: 39 70 65;
+    --jsonValColor: 220 10 80;
+    --jsonValStringColor: 340 65 65;
+    --jsonValNumberColor: 29 78 62;
+    --jsonValBooleanColor: 120 45 55;
+  }
+
+  html[data-theme='gruvbox-dark'] {
+    --background: 30 25 10;
+    --background-darker: 30 25 8;
+    --background-lighter: 30 25 14;
+    --background-lightest: 30 25 20;
+    --background-lightest-hover: 30 25 25;
+    --foreground: 45 30 85;
+    --foreground-inverted: 30 25 10;
+    --foreground-muted: 45 30 55;
+
+    --border: 30 25 12;
+    --border-light: 30 25 18;
+    --border-lighter: 30 25 22;
+    --border-lighter-hover: 30 25 26;
+
+    --primary: 40 70 60;
+    --primary-muted: 40 50 40;
+
+    --jsonBracketColor: 40 70 60;
+    --jsonBracketHoverBackground: 30 25 14;
+    --jsonSeparatorColor: 40 70 60;
+    --jsonKeyColor: 30 70 65;
+    --jsonValColor: 45 30 85;
+    --jsonValStringColor: 20 65 65;
+    --jsonValNumberColor: 35 65 55;
+    --jsonValBooleanColor: 90 40 50;
+  }
+
+  html[data-theme='zenbones-dark'] {
+    --background: 240 5 12;
+    --background-darker: 240 5 10;
+    --background-lighter: 240 5 16;
+    --background-lightest: 240 5 20;
+    --background-lightest-hover: 240 5 24;
+    --foreground: 240 2 85;
+    --foreground-inverted: 240 5 12;
+    --foreground-muted: 240 2 60;
+
+    --border: 240 5 14;
+    --border-light: 240 5 18;
+    --border-lighter: 240 5 22;
+    --border-lighter-hover: 240 5 26;
+
+    --primary: 120 15 50;
+    --primary-muted: 120 10 40;
+
+    --jsonBracketColor: 120 15 50;
+    --jsonBracketHoverBackground: 240 5 14;
+    --jsonSeparatorColor: 120 15 50;
+    --jsonKeyColor: 45 20 65;
+    --jsonValColor: 240 2 85;
+    --jsonValStringColor: 30 30 55;
+    --jsonValNumberColor: 60 15 50;
+    --jsonValBooleanColor: 100 15 50;
+  }
+
+  /*::-moz-selection {*/
+  /*  color: var(--foreground);*/
+  /*  background: hsl(var(--jsonBracketHoverBackground));*/
+  /*}*/
+  /**/
+  /*::selection {*/
+  /*  color: var(--foreground);*/
+  /*  background: hsl(var(--jsonBracketHoverBackground));*/
+  /*}*/
+
+  html {
+    font-size: 14px;
+    @apply antialiased bg-background text-foreground;
+  }
+
+  /**,*/
+  a,
+  button {
+    cursor: default;
+    user-select: none;
+  }
+
+  ._jsonBkt {
+    cursor: default;
+  }
+}
+
+@layer components {
+  .drag {
+    user-select: none;
+    -webkit-app-region: drag;
+  }
+
+  .no-drag {
+    -webkit-app-region: no-drag;
+  }
+
+  ._jsonList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-left: var(--jsonPaddingLeft);
+    border-left: var(--jsonBorderLeft);
+  }
+
+  ._jsonBkt {
+    color: hsl(var(--jsonBracketColor));
+    border-radius: 4px;
+    padding-block: 5px;
+    padding-inline: 2px;
+    margin-inline: -2px;
+    margin-block: -5px;
+  }
+
+  ._jsonBkt:not(.empty):hover {
+    background: hsl(var(--jsonBracketHoverBackground));
+  }
+
+  ._jsonSep {
+    color: hsl(var(--jsonSeparatorColor));
+  }
+
+  ._jsonKey {
+    color: hsl(var(--jsonKeyColor));
+  }
+
+  ._jsonVal {
+    color: hsl(var(--jsonValColor));
+  }
+
+  ._jsonVal.string {
+    color: hsl(var(--jsonValStringColor));
+  }
+
+  ._jsonVal.number {
+    color: hsl(var(--jsonValNumberColor));
+  }
+
+  ._jsonVal.boolean {
+    color: hsl(var(--jsonValBooleanColor));
+  }
+
+  .fade-in {
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      background-color: hsl(var(--background-lighter));
+    }
+    20% {
+      background-color: hsl(var(--primary-muted));
+    }
+    90% {
+      background-color: hsl(var(--primary-muted));
+    }
+    100% {
+      background-color: hsl(var(--background-lighter));
+    }
+  }
+}
